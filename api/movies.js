@@ -1,8 +1,8 @@
 // api/movies.js
 import express from 'express';
 import cors from 'cors';
-import fetch from 'node-fetch'; // node-fetch is typically available in Vercel's Node.js runtime
-import dotenv from 'dotenv'; // dotenv is for local development, Vercel uses its own environment variables
+import fetch from 'node-fetch';
+import dotenv from 'dotenv';
 
 // Load environment variables if running locally (Vercel handles them automatically)
 if (process.env.NODE_ENV !== 'production') {
@@ -12,8 +12,6 @@ if (process.env.NODE_ENV !== 'production') {
 const app = express();
 
 // Use CORS to allow requests from your frontend
-// Vercel functions typically handle CORS automatically for simple cases,
-// but it's good to keep this explicitly for broader compatibility.
 app.use(cors());
 
 // Define the API endpoint that your frontend will call
